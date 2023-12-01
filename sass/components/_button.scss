@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+@use "../utilities/" as *;
+
+.button {
+    display: inline-flex;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    border: 0;
+    font-weight: $fw-bold;
+    padding: size(18) size(32);
+    transition: 275ms ease;
+
+    &[data-color="primary"] {
+        background-color: clr(primary, 400);
+        color: clr(neutral, 900);
+        &:is(:hover, :focus) {
+            background: clr(neutral, 100);
+            color: clr(neutral, 900);
+        }
+    }
+
+    &[data-color="accent"] {
+        background-color: clr(accent, 400);
+        color: clr(neutral, 900);
+        &:is(:hover, :focus) {
+            background: clr(neutral, 100);
+            color: clr(neutral, 900);
+        }
+    }
+
+    &[data-color="outline"] {
+        --outline-size: #{size(4)};
+        background: transparent;
+        outline: var(--outline-size) solid clr(neutral, 100);
+        outline-offset: calc(var(--outline-size) * -1);
+        color: clr(neutral, 100);
+        &:is(:hover, :focus) {
+            background: clr(neutral, 100);
+            color: clr(neutral, 900);
+        }
+    }
+}
