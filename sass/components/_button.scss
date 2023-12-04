@@ -5,40 +5,43 @@
     display: inline-flex;
     cursor: pointer;
     text-decoration: none;
-    text-transform: uppercase;
     line-height: 1;
-    border: 0;
-    font-weight: $fw-bold;
-    padding: size(18) size(32);
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    text-transform: $button-text-transform;
+    border: $button-border;
+    border-radius: $button-border-radius;
+    padding: $button-padding;
     transition: 275ms ease;
 
     &[data-color="primary"] {
-        background-color: clr(primary, 400);
-        color: clr(neutral, 900);
+        background-color: $button-primary-background;
+        color: $button-primary-color;
         &:is(:hover, :focus) {
-            background: clr(neutral, 100);
-            color: clr(neutral, 900);
+            background: $button-primary-background-hover;
+            color: $button-primary-color-hover;
         }
     }
 
     &[data-color="accent"] {
-        background-color: clr(accent, 400);
-        color: clr(neutral, 900);
+        background-color: $button-accent-background;
+        color: $button-accent-color;
         &:is(:hover, :focus) {
-            background: clr(neutral, 100);
-            color: clr(neutral, 900);
+            background: $button-accent-background-hover;
+            color: $button-accent-color-hover;
         }
     }
 
     &[data-color="outline"] {
         --outline-size: #{size(4)};
         background: transparent;
-        outline: var(--outline-size) solid clr(neutral, 100);
+        outline: var(--outline-size) solid $button-outline-border;
         outline-offset: calc(var(--outline-size) * -1);
-        color: clr(neutral, 100);
+        color: $button-outline-color;
         &:is(:hover, :focus) {
-            background: clr(neutral, 100);
-            color: clr(neutral, 900);
+            background: $button-outline-border-hover;
+            color: $button-outline-color-hover;
         }
     }
 }

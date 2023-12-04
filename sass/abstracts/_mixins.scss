@@ -2,6 +2,7 @@
 @use "sass:meta";
 @use "sass:math";
 @use "breakpoints" as *;
+@use "tokens.scss" as *;
 @use "typography.scss" as *;
 
 @mixin mq($size) {
@@ -22,4 +23,15 @@
     } @else {
         @error "The keyword #{$size} is not in the $breakpoints map";
     }
+}
+
+@mixin heading($fs, $color: $body-text-color) {
+    font-size: $fs;
+    color: $color;
+
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    letter-spacing: $heading-letter-spacing;
+    text-transform: $heading-text-transform;
+    line-height: $heading-line-height;
 }

@@ -1,0 +1,172 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+$enable-media-query-dark-mode: false;
+$active-theme: $light;
+
+// color
+
+$color-text-default: $color-primary-700;
+$color-text-inversed: $color-primary-300;
+$color-background-default: $color-primary-100;
+$color-background-inversed: $color-primary-800;
+$color-text-interactive-default: $color-accent-400;
+$color-text-interactive-hover: $color-accent-700;
+
+// typography
+
+$letter-spacing-loose: 0.16em;
+
+// body
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.5;
+$body-font-weight: $font-weight-default;
+$body-font-weight-semi-bold: $font-weight-semi-bold;
+$body-font-weight-bold: $font-weight-bold;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
+
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-text-transform: uppercase;
+$heading-line-height: 1;
+$heading-color-default: $body-text-color;
+
+// border radius
+
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+// shadows
+
+$box-shadow-1: 0 $size-1 $size-4 rgba(0, 0, 0, 0.05);
+$box-shadow-2: 0 $size-1 $size-4 rgba(0, 0, 0, 0.15);
+
+// layout
+
+$grid-gap: $size-6;
+
+$flex-group-gap: $size-3;
+
+$section-padding-block: clamp(5rem, 11vh, 6rem);
+
+$hero-padding-block: clamp(15rem, 15vh, 20rem);
+
+$container-min-margin-inline: $size-4;
+$container-max-width: 64rem;
+$container-max-width-sm: 40rem;
+$container-max-width-xl: 75rem;
+
+// site header
+
+$site-header-background-color: $color-primary-800;
+$site-header-color: $color-primary-100;
+$site-header-padding: $size-8 0;
+$site-header-margin: 0;
+$site-header-justification: space-between;
+$site-header-alignment: flex-start;
+
+// site footer
+$site-footer-background-color: $color-primary-800;
+$site-footer-color: $color-primary-300;
+$site-footer-padding: $size-8 0;
+$site-footer-margin: 0;
+$site-footer-link-color: $color-primary-100;
+$site-footer-link-color-hover: $color-accent-200;
+$site-footer-font-family: $font-family-accent;
+
+// navigation
+
+$navigation-font-family: $font-family-accent;
+$navigation-font-size: $font-size-400;
+$navigation-font-weight: $font-weight-bold;
+$navigation-letter-spacing: $letter-spacing-loose;
+$navigation-spacing: $size-9;
+$navigation-color: $site-header-color;
+$navigation-color-hover: $color-accent-200;
+
+// card
+
+$card-color-default: $body-text-color;
+$card-background-default: $color-primary-100;
+
+$card-font-family: $body-font-family;
+$card-font-size: $font-size-400;
+$card-line-height: 1.25;
+
+$card-heading-font-size: $font-size-600;
+$card-heading-color-default: $card-color-default;
+
+$card-flow-spacing: $size-2;
+$card-body-padding: $size-8;
+$card-border-radius: $border-radius-2;
+$card-box-shadow: $box-shadow-1;
+
+// form
+
+$form-label-font-family: $body-font-family;
+$form-label-font-size: $body-font-size;
+$form-label-font-weight: $font-weight-bold;
+$form-label-color: $body-text-color;
+
+$form-input-font-family: $body-font-family;
+$form-input-font-size: $body-font-size;
+$form-input-font-weight: $font-weight-semi-bold;
+$form-input-color: $body-text-color;
+$form-input-background-color: $color-primary-200;
+$form-input-border-default: 3px solid $color-primary-200;
+$form-input-border-focus: 3px solid $color-primary-400;
+$form-input-padding: $size-3;
+$form-input-border-radius: $border-radius-1;
+
+$form-placeholder-color: $color-primary-300;
+$form-placeholder-font-family: $form-input-font-family;
+$form-placeholder-font-weight: $form-input-font-weight;
+$form-placeholder-font-size: $body-font-size;
+
+$form-group-column-gap: $size-7;
+$form-group-row-gap: $size-3;
+
+// button
+
+$button-font-family: $body-font-family;
+$button-font-size: $body-font-size;
+$button-font-weight: $font-weight-bold;
+$button-text-transform: none;
+$button-padding: 0.75em 2em;
+$button-padding-default: $size-3 $size-9;
+$button-border: 0;
+$button-border-radius: $border-radius-1;
+
+$button-primary-color: $color-primary-100;
+$button-primary-background: $color-primary-700;
+$button-primary-color-hover: $color-primary-100;
+$button-primary-background-hover: $color-primary-800;
+
+$button-accent-color: $color-neutral-100;
+$button-accent-background: $color-accent-400;
+$button-accent-color-hover: $color-neutral-100;
+$button-accent-background-hover: $color-accent-700;
+
+$button-outline-color: $color-neutral-100;
+$button-outline-background: $color-accent-400;
+$button-outline-border: $color-accent-400;
+$button-outline-color-hover: $color-neutral-100;
+$button-outline-border-hover: $color-accent-700;
+$button-outline-background-hover: $color-accent-700;
+
+// logo
+
+$logo-size-default: 15rem;
+$logo-size-header: $logo-size-default;
+$logo-size-footer: $logo-size-default;
+
+$logo-fill-default: $color-accent-400;
+$logo-fill-header: $color-primary-100;
+$logo-fill-footer: $color-accent-300;

@@ -1,18 +1,18 @@
 @use "sass:map";
 @use "../abstracts" as *;
 
-@each $weight-name, $weight-value in $font-weights {
-    .fw-#{$weight-name} {
-        font-weight: $weight-value;
-    }
-}
-
-$fw-regular: 400;
-$fw-bold: 700;
+// @each $weight-name, $weight-value in $font-weights {
+//     .fw-#{$weight-name} {
+//         font-weight: $weight-value;
+//     }
+// }
 
 .fw-regular {
-    font-weight: map.get($font-weights, 400);
+    font-weight: $font-weight-default;
+}
+.fw-semi-bold {
+    font-weight: $font-weight-semi-bold;
 }
 .fw-bold {
-    font-weight: map.get($font-weights, 700);
+    font-weight: $font-weight-bold;
 }
